@@ -16,8 +16,6 @@ gitprompt='$(__git_ps1 "[%s]")'
 export PS1="\[$txtylw\] $twolevelprompt\[$fgcolor\]$gitprompt"'\$ '
 
 
-PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
-
 ##
 # Your previous /Users/eric/.profile file was backed up as /Users/eric/.profile.macports-saved_2009-03-10_at_16:53:51
 ##
@@ -33,3 +31,6 @@ export PATH=~/opt/bin:${PATH}
 
 # Add for brews python3
 export PATH=/usr/local/share/python3:$PATH
+
+
+[[ -n $PS1 && -f ~/.bashrc ]] && . ~/.bashrc
