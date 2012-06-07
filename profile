@@ -21,13 +21,11 @@ export PS1="\[$txtylw\] $twolevelprompt\[$fgcolor\]$gitprompt"'\$ '
 ##
 /usr/bin/ssh-agent > /dev/null
 
+# add my bin dir to path
+export PATH=~/bin:$PATH
 
 # Add MAMP lib bin to path
 export PATH=/Applications/MAMP/Library/bin:$PATH
-
-# Add cake console tools
-export PATH=/Users/eric/cakephp/current/cake/console:$PATH
-export PATH=~/opt/bin:${PATH}
 
 # Add for brews python3
 export PATH=/usr/local/share/python3:$PATH
