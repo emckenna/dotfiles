@@ -15,7 +15,6 @@ twolevelprompt='$([ "$PWD" != "${PWD%/*/*/*}" ] && echo "/...${PWD##${PWD%/*/*}}
 gitprompt='$(__git_ps1 "[%s]")'
 export PS1="\[$txtylw\] $twolevelprompt\[$fgcolor\]$gitprompt"'\$ '
 
-
 ##
 # Your previous /Users/eric/.profile file was backed up as /Users/eric/.profile.macports-saved_2009-03-10_at_16:53:51
 ##
@@ -23,6 +22,7 @@ export PS1="\[$txtylw\] $twolevelprompt\[$fgcolor\]$gitprompt"'\$ '
 
 # add my bin dir to path
 export PATH=~/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 # Add MAMP lib bin to path
 export PATH=/Applications/MAMP/Library/bin:$PATH
@@ -30,5 +30,10 @@ export PATH=/Applications/MAMP/Library/bin:$PATH
 # Add for brews python3
 export PATH=/usr/local/share/python3:$PATH
 
+# Add Virtual box to path, vagrant setup
+export PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS
 
 [[ -n $PS1 && -f ~/.bashrc ]] && . ~/.bashrc
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
