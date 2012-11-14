@@ -5,7 +5,8 @@ alias ll='ls -la'
 
 LSCOLORS='exfxcxdxbxegedabagacad' ; export LSCOLORS
 export SVN_EDITOR=/usr/bin/vim
-source ~/bin/git-completion.sh
+#source ~/bin/git-completion.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 
@@ -15,9 +16,6 @@ twolevelprompt='$([ "$PWD" != "${PWD%/*/*/*}" ] && echo "/...${PWD##${PWD%/*/*}}
 gitprompt='$(__git_ps1 "[%s]")'
 export PS1="\[$txtylw\] $twolevelprompt\[$fgcolor\]$gitprompt"'\$ '
 
-##
-# Your previous /Users/eric/.profile file was backed up as /Users/eric/.profile.macports-saved_2009-03-10_at_16:53:51
-##
 /usr/bin/ssh-agent > /dev/null
 
 # add my bin dir to path
@@ -32,6 +30,10 @@ export PATH=/usr/local/share/python3:$PATH
 
 # Add Virtual box to path, vagrant setup
 export PATH=$PATH:/Applications/VirtualBox.app/Contents/MacOS
+
+# homebrew
+homebrew=/usr/local/bin:/usr/local/sbin
+export PATH=$homebrew:$PATH
 
 [[ -n $PS1 && -f ~/.bashrc ]] && . ~/.bashrc
 
